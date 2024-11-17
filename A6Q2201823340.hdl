@@ -13,6 +13,6 @@ CHIP A6Q2201823340{
     And(a=a,b=notb,out=andab);
     And(a=andab,b=notc,out=andbc);
 
-    Or(a=andab,b=andbc,out=f);
+    Or(a=andac,b=andbc,out=f);
 }
 
