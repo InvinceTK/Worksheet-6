@@ -3,18 +3,18 @@ CHIP A6Q2201823340 {
     OUT f;
 
     PARTS:
-    
+
     Not(in = a, out = nota);
-    And(a = nota, b = b, out = andab);
     Not(in = d, out = notd);
-    And(a = andab, b = notd, out = x);
+    And(a = nota, b = b, out = t1);
+    And(a = t1, b = notd, out = term1);
 
 
     Not(in = b, out = notb);
-    And(a = a, b = notb, out = notab);
     Not(in = c, out = notc);
-    And(a = notab, b = notc, out = y);
+    And(a = a, b = notb, out = t2);
+    And(a = t2, b = notc, out = term2);
 
- 
-    Or(a = x, b = y, out = f);
+
+    Or(a = term1, b = term2, out = f);
 }
