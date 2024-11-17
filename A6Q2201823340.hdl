@@ -13,7 +13,7 @@ CHIP A6Q2201823340{
     And(a=notb, b=a,out=notab);
 
     Not(in=c, out=notc);
-    And(a=notb,b=notc,out=andbc);
+    And(a=notb,b=a,out=andbc);
 
     And(a=andab, b=andbd,out=x); 
     And(a=notab,b=andbc, out=y);
