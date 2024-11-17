@@ -9,10 +9,11 @@ CHIP A6Q2201823340{
     Not(in=c,out=notc);
     Not(in=d,out=notd);
 
-    And(a=nota,b=notc,out=andac);
-    And(a=notb,b=a,out=andab);
-    And(a=andac,b=notd,out=andx);
-    And(a=andab,b=notc,out=andy);
+    And(a=a,b=notb,out=andab);
+    And(a=andab,b=notc,out=x);
 
-    Or(a=andx,b=andy,out=f);
+    And(a=nota,b=b,out=andab2);
+    And(a=andab2,b=notd,out=y);
+
+    Or(a=x,b=y,out=f);
 }
