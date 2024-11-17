@@ -20,10 +20,12 @@ CHIP A6Q2201823340{
 
     And(a=nota,b=notb,out=notab);
     And(a=c,b=d,out=andcd);
-    And(a=notab,b=andcd,andabcd);
+    And(a=notab,b=andcd,out=andabcd);
 
     Or(a=notacd,b=andcab,out=x);
     Or(a=andadb,b=andabcd,out=y);
 
     Or(a=x,b=y,out=f);
 }
+
+
